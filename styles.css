@@ -1,43 +1,85 @@
-@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
-#body {
+body {
+  font-family: "Arial", sans-serif;
   text-align: center;
-  margin-top: 150px;
+  background: linear-gradient(135deg, #f0f8ff, #e6e6fa);
+  margin: 0;
+  padding: 20px;
+  color: #333;
 }
-#parabgm {
-  background-color: black;
-  margin-right: 100px;
-  margin-left: 100px;
-  margin-top: 20px;
-  height: 50px;
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #4a4a4a;
+}
+
+p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.color-display {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #ccc;
   border-radius: 10px;
-  color: white;
-  font-family: Open Sans;
-  text-align: center;
-  padding: 10px;
-  font-size: 18px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+#color-code {
+  font-size: 1.2rem;
   font-weight: bold;
+  color: #333;
+  transition: all 0.4s ease;
 }
-#button1 {
-  height: 60px;
-  width: 80px;
-  border-radius: 10px;
-  background-color: #e0e0e0;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  margin: 20px auto;
 }
-#button2 {
-  height: 60px;
-  width: 80px;
+
+.color-box {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+  cursor: pointer;
   border-radius: 10px;
-  background-color: #6fcf97;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-#button3 {
-  height: 60px;
-  width: 80px;
-  border-radius: 10px;
-  background-color: #56ccf2;
+
+.color-box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
-#button4 {
-  height: 60px;
-  width: 80px;
-  border-radius: 10px;
-  background-color: #bb6bd9;
+
+.color-box span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.color-box:hover span {
+  opacity: 1;
 }
